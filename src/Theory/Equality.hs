@@ -85,7 +85,7 @@ apply _ _ = axiom
 -- | Given a formula and an equality over ones of its arguments,
 --   replace the left-hand side of the equality with the right-hand side.
 substitute :: (Argument f n, GetArg f n ~ x)
-    => Arg n -> Proof (x == x') -> f -> Proof (SetArg f n x')
+    => Arg n -> Proof (x == x') -> Proof f -> Proof (SetArg f n x')
 substitute _ _ _ = axiom
 
 -- | Substitute @x'@ for @x@ under the function @f@, on the left-hand side
